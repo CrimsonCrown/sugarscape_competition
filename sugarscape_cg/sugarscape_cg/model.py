@@ -91,23 +91,8 @@ class SugarscapeCg(mesa.Model):
         self.schedule.step()
         # collect data
         self.datacollector.collect(self)
-        if self.verbose:
-            print([self.schedule.time, self.schedule.get_type_count(SsAgent)])
 
     def run_model(self, step_count=200):
 
-        if self.verbose:
-            print(
-                "Initial number Sugarscape Agent: ",
-                self.schedule.get_type_count(SsAgent),
-            )
-
         for i in range(step_count):
             self.step()
-
-        if self.verbose:
-            print("")
-            print(
-                "Final number Sugarscape Agent: ",
-                self.schedule.get_type_count(SsAgent),
-            )
