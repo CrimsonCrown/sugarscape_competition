@@ -9,7 +9,7 @@ params={"width":50, "height":50, "initial_population":100, "initial_population2"
 results=batch_run(
 	SugarscapeCg,
 	parameters=params,
-	iterations=100,
+	iterations=300,
 	max_steps=50,
 	number_processes=1,
 	data_collection_period=-1,
